@@ -144,4 +144,11 @@ export const GALLERY: GalleryImage[] = [
     name: "Chandrayaan Series LED bulb packaging (20W–50W)",
     alt: "Chandrayaan Series LED bulb packaging showing 20W, 30W, 40W and 50W variants",
   },
+  {
+    id: "p20",
+    src: ASSETS.ledBulb9w,
+    label: "LED bulb",
+    name: "Netron Lighting 9 Watt",
+    alt: "Netron Lighting 9 Watt LED bulb packaging boxes",
+  },
 ];

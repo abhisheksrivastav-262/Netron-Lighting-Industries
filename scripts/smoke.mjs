@@ -149,13 +149,13 @@ await page.fill("#product-search", "");
 await page.locator('button:has-text("LED Bulbs")').click();
 await page.waitForTimeout(200);
 const bulbCards = await page.locator("article").count();
-check(bulbCards === 2, `category filter "LED Bulbs" shows 2 products (got ${bulbCards})`);
+check(bulbCards === 3, `category filter "LED Bulbs" shows 3 products (got ${bulbCards})`);
 
 // ---- Gallery ----
 const galleryTile = 'button[aria-label^="View larger:"]';
 await page.goto(BASE + "/gallery", { waitUntil: "networkidle" });
 const galleryTiles = await page.locator(galleryTile).count();
-check(galleryTiles === 18, `gallery page shows all 18 photographs (got ${galleryTiles})`);
+check(galleryTiles === 19, `gallery page shows all 19 photographs (got ${galleryTiles})`);
 await page.locator(galleryTile).first().click();
 await page.waitForSelector('[role="dialog"]');
 check((await page.locator('[role="dialog"]').count()) === 1, "clicking a gallery tile opens the lightbox");
@@ -170,7 +170,7 @@ check((await page.locator('[role="dialog"]').count()) === 0, "Escape closes the 
 
 await page.goto(BASE + "/", { waitUntil: "networkidle" });
 const homeTiles = await page.locator(galleryTile).count();
-check(homeTiles === 18, `home page gallery shows all 18 photographs (got ${homeTiles})`);
+check(homeTiles === 19, `home page gallery shows all 19 photographs (got ${homeTiles})`);
 
 // contact form validation
 await page.goto(BASE + "/contact", { waitUntil: "networkidle" });

@@ -28,6 +28,23 @@ export interface Product {
  */
 export const PRODUCTS: Product[] = [
   {
+    slug: "netron-lighting-nine-watt",
+    name: "Netron Lighting 9 Watt",
+    category: "LED Bulbs",
+    tagline: "9 Watt LED bulb",
+    description:
+      "Netron Lighting 9 Watt LED bulb in genuine retail packaging. Energy-saving, long-lasting illumination engineered by Netron Lighting Industries.",
+    image: ASSETS.ledBulb9w,
+    imageAlt: "Netron Lighting 9 Watt LED bulb packaging boxes",
+    specs: [
+      { label: "Product type", value: "LED bulb" },
+      { label: "Wattage", value: "9W" },
+      { label: "Brand", value: "Netron Lighting" },
+      { label: "Base type", value: "B22" },
+      { label: "Packaging", value: "Retail box / pack" },
+    ],
+  },
+  {
     slug: "netron-led-bulb",
     name: "LED Bulb",
     category: "LED Bulbs",

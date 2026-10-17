@@ -224,6 +224,17 @@
       "label": "Logo",
       "intendedUse": "Circular logo for round UI presentations and touch icons",
       "evidence": "Centre square (720x720) cropped from logo.jpeg, scaled with LANCZOS to 512, circular alpha mask applied — transparent corners, original file untouched."
+    },
+    {
+      "id": "product9w",
+      "filename": "photo-20.jpeg",
+      "originalFilename": "media_1792230557524.png",
+      "relativePath": "public/images/photo-20.jpeg",
+      "dimensions": "512x384",
+      "name": "Netron Lighting 9 Watt",
+      "label": "LED bulb",
+      "intendedUse": "Product card / gallery",
+      "evidence": "OCR: \"Netron Lighting\", \"9 watt\" — Netron Lighting 9 Watt LED bulb packaging boxes."
     }
   ]
 }

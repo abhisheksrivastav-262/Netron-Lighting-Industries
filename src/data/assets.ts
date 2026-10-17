@@ -15,6 +15,7 @@ export const ASSETS = {
   logoSquare: `${BASE}logo-512.png`,
 
   // Products
+  ledBulb9w: `${BASE}photo-20.jpeg`,
   ledBulb: `${BASE}photo-07.jpeg`,
   ledBulbLit: `${BASE}photo-08.jpeg`,
   downlight7w: `${BASE}photo-16.jpeg`,
