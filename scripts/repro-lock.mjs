@@ -1,0 +1,21 @@
+import pkg from '/Users/abhisheksrivastav/Documents/Netron Lighting Industries/node_modules/playwright/index.js';
+const { chromium } = pkg;
+const b = await chromium.launch();
+const p = await b.newPage({ viewport: { width: 390, height: 844 } });
+await p.goto("http://localhost:4173/", { waitUntil: "networkidle" });
+await p.evaluate(() => window.scrollTo(0, 1200));
+await p.waitForTimeout(300);
+console.log("before:", await p.evaluate(() => window.scrollY));
+await p.evaluate(() => { document.body.style.overflow = "hidden"; });
+await p.waitForTimeout(200);
+console.log("after body overflow hidden:", await p.evaluate(() => window.scrollY));
+await p.evaluate(() => { document.body.style.overflow = ""; });
+await p.waitForTimeout(200);
+// try html overflow hidden
+await p.evaluate(() => window.scrollTo(0, 1200));
+await p.waitForTimeout(300);
+console.log("before2:", await p.evaluate(() => window.scrollY));
+await p.evaluate(() => { document.documentElement.style.overflow = "hidden"; });
+await p.waitForTimeout(200);
+console.log("after html overflow hidden:", await p.evaluate(() => window.scrollY));
+await b.close();

@@ -26,6 +26,10 @@
     /* Directional reveal animations translate sideways; clip that horizontal
        overflow so they can never produce a sideways scrollbar. */
     overflow-x: clip;
+    /* Prevent the browser from auto-adjusting scroll position when the mobile
+       nav panel expands/collapses (scroll anchoring), which previously made
+       the menu appear off-screen after scrolling down. */
+    overflow-anchor: none;
   }
 
   body {

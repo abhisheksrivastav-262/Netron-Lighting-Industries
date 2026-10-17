@@ -42,11 +42,13 @@ export default function Navbar() {
         toggleRef.current?.focus();
       }
     };
+    const scrollY = window.scrollY;
     document.addEventListener("keydown", onKey);
-    document.body.style.overflow = "hidden";
+    document.documentElement.style.overflow = "hidden";
     return () => {
       document.removeEventListener("keydown", onKey);
-      document.body.style.overflow = "";
+      document.documentElement.style.overflow = "";
+      window.scrollTo(0, scrollY);
     };
   }, [open]);
 
@@ -140,8 +142,8 @@ export default function Navbar() {
 
       <div
         id={panelId}
-        className={`lg:hidden overflow-hidden border-t border-white/10 bg-midnight transition-[max-height,opacity] duration-300 ease-out ${
-          open ? "max-h-[32rem] opacity-100" : "max-h-0 opacity-0"
+        className={`lg:hidden border-t border-white/10 bg-midnight transition-[max-height,opacity] duration-300 ease-out ${
+          open ? "max-h-[32rem] overflow-y-auto opacity-100" : "max-h-0 overflow-hidden opacity-0"
         }`}
       >
         <ul className="container-page flex flex-col gap-1 py-4">

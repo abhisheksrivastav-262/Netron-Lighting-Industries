@@ -1,0 +1,14 @@
+import pkg from '/Users/abhisheksrivastav/Documents/Netron Lighting Industries/node_modules/playwright/index.js';
+const { chromium } = pkg;
+const b = await chromium.launch();
+const p = await b.newPage({ viewport: { width: 390, height: 844 } });
+await p.goto("http://localhost:4173/", { waitUntil: "networkidle" });
+await p.evaluate(() => window.scrollTo(0, 1200));
+await p.waitForTimeout(300);
+console.log("before open headerTop:", await p.evaluate(() => document.querySelector("header").getBoundingClientRect().top));
+await p.click('button[aria-label="Open navigation menu"]');
+await p.waitForTimeout(500);
+console.log("after open headerTop:", await p.evaluate(() => document.querySelector("header").getBoundingClientRect().top));
+console.log("after open scrollY:", await p.evaluate(() => window.scrollY));
+console.log("header position:", await p.evaluate(() => getComputedStyle(document.querySelector("header")).position));
+await b.close();
