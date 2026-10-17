@@ -63,26 +63,38 @@ export default function HomePage() {
       <section className="relative overflow-hidden bg-midnight">
         <div className="light-grid absolute inset-0 opacity-90" aria-hidden="true" />
         <div
-          className="absolute -right-40 top-1/2 hidden h-[36rem] w-[36rem] -translate-y-1/2 rounded-full bg-electric/25 blur-[120px] lg:block"
+          className="anim-glow absolute -right-40 top-1/2 hidden h-[36rem] w-[36rem] -translate-y-1/2 rounded-full bg-electric/25 blur-[120px] lg:block"
           aria-hidden="true"
         />
         <PageContainer className="relative grid items-center gap-12 py-16 sm:py-20 lg:grid-cols-[1.05fr_0.95fr] lg:py-28">
           <div>
-            <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.18em] text-ice">
+            <span
+              className="anim-pop inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.18em] text-ice"
+              style={{ animationDelay: "60ms" }}
+            >
               LED Bulb Manufacturing
             </span>
-            <h1 className="mt-6 text-4xl font-semibold leading-[1.05] text-white text-gradient sm:text-5xl lg:text-6xl">
+            <h1
+              className="anim-pop mt-6 text-4xl font-semibold leading-[1.05] text-white text-gradient-animated sm:text-5xl lg:text-6xl"
+              style={{ animationDelay: "150ms" }}
+            >
               Reliable LED Lighting for Modern Spaces
             </h1>
-            <p className="mt-6 max-w-xl text-base leading-relaxed text-white/70 sm:text-lg">
+            <p
+              className="anim-pop mt-6 max-w-xl text-base leading-relaxed text-white/70 sm:text-lg"
+              style={{ animationDelay: "260ms" }}
+            >
               Discover LED lighting solutions from {COMPANY.name}, based in Meja
               Road, Prayagraj, Uttar Pradesh. Explore our bulbs and lighting
               products, and reach us directly for business enquiries.
             </p>
-            <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+            <div
+              className="anim-pop mt-9 flex flex-col gap-3 sm:flex-row"
+              style={{ animationDelay: "360ms" }}
+            >
               <Link
                 to="/products"
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-electric px-7 py-3.5 text-sm font-semibold text-white shadow-[var(--shadow-glow)] transition hover:bg-ice hover:text-midnight"
+                className="shine inline-flex items-center justify-center gap-2 rounded-full bg-electric px-7 py-3.5 text-sm font-semibold text-white shadow-[var(--shadow-glow)] transition hover:bg-ice hover:text-midnight"
               >
                 Explore Products
                 <span aria-hidden="true">→</span>
@@ -94,7 +106,10 @@ export default function HomePage() {
                 Contact Us
               </Link>
             </div>
-            <dl className="mt-12 grid max-w-lg grid-cols-1 gap-x-8 gap-y-4 border-t border-white/10 pt-8 text-sm sm:grid-cols-2">
+            <dl
+              className="anim-pop mt-12 grid max-w-lg grid-cols-1 gap-x-8 gap-y-4 border-t border-white/10 pt-8 text-sm sm:grid-cols-2"
+              style={{ animationDelay: "460ms" }}
+            >
               <div>
                 <dt className="text-white/50">Business</dt>
                 <dd className="mt-0.5 font-medium text-white">
@@ -110,7 +125,7 @@ export default function HomePage() {
             </dl>
           </div>
 
-          <div className="relative mx-auto w-full max-w-md">
+          <div className="anim-float relative mx-auto w-full max-w-md">
             <Photo
               src={ASSETS.downlight7w}
               alt="7W LED downlight from Netron Lighting Industries photographed against a dark background"
@@ -158,7 +173,7 @@ export default function HomePage() {
       {/* Company introduction */}
       <section className="bg-white py-16 sm:py-24">
         <PageContainer className="grid items-center gap-12 lg:grid-cols-2">
-          <Reveal>
+          <Reveal variant="left">
             <div className="space-y-4">
               <Photo
                 src={ASSETS.brandBoard}
@@ -239,7 +254,7 @@ export default function HomePage() {
           {STRENGTHS.map((item, i) => (
             <li key={item.title}>
               <Reveal delay={i * 70}>
-                <div className="soft-card h-full p-6">
+                <div className="soft-card card-lift h-full p-6">
                   <span className="text-2xl" aria-hidden="true">
                     {item.icon}
                   </span>
@@ -274,7 +289,7 @@ export default function HomePage() {
               <span aria-hidden="true">→</span>
             </Link>
           </Reveal>
-          <Reveal delay={100}>
+          <Reveal delay={100} variant="right">
             <div className="space-y-4">
               <Photo
                 src={ASSETS.ledBulbLit}

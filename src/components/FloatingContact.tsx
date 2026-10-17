@@ -13,7 +13,8 @@ export default function FloatingContact({ className = "" }: { className?: string
       <a
         href={COMPANY.phoneDial}
         aria-label={`Call ${COMPANY.name}`}
-        className="inline-flex h-14 items-center gap-2 rounded-full bg-electric pl-4 pr-5 text-sm font-semibold text-white shadow-lg shadow-black/25 transition hover:scale-[1.03] hover:bg-ice hover:text-midnight focus-visible:outline-offset-4"
+        className="anim-pop inline-flex h-14 items-center gap-2 rounded-full bg-electric pl-4 pr-5 text-sm font-semibold text-white shadow-lg shadow-black/25 transition hover:scale-[1.03] hover:bg-ice hover:text-midnight active:scale-95 focus-visible:outline-offset-4"
+        style={{ animationDelay: "180ms" }}
       >
         <svg
           viewBox="0 0 24 24"
@@ -31,7 +32,8 @@ export default function FloatingContact({ className = "" }: { className?: string
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat with Netron Lighting Industries on WhatsApp"
-        className="inline-flex h-14 items-center gap-2 rounded-full bg-[#25D366] pl-4 pr-5 text-sm font-semibold text-white shadow-lg shadow-black/25 transition hover:scale-[1.03] hover:bg-[#1ebe5b] focus-visible:outline-offset-4"
+        className="anim-pop inline-flex h-14 items-center gap-2 rounded-full bg-[#25D366] pl-4 pr-5 text-sm font-semibold text-white shadow-lg shadow-black/25 transition hover:scale-[1.03] hover:bg-[#1ebe5b] active:scale-95 focus-visible:outline-offset-4"
+        style={{ animationDelay: "300ms" }}
       >
         <svg
           viewBox="0 0 24 24"

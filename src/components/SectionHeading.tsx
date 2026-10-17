@@ -26,10 +26,14 @@ export default function SectionHeading({
     >
       {eyebrow && (
         <p
-          className={`mb-3 text-xs font-semibold uppercase tracking-[0.24em] ${
+          className={`mb-3 inline-flex items-center gap-2.5 text-xs font-semibold uppercase tracking-[0.24em] ${
             isDark ? "text-ice" : "text-electric"
           }`}
         >
+          <span
+            className="h-px w-8 shrink-0 bg-current opacity-70"
+            aria-hidden="true"
+          />
           {eyebrow}
         </p>
       )}

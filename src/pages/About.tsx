@@ -58,7 +58,7 @@ export default function AboutPage() {
             </div>
           </Reveal>
 
-          <Reveal delay={100}>
+          <Reveal delay={100} variant="right">
             <div className="grid grid-cols-2 gap-4">
               <Photo
                 src={ASSETS.ledBulb}

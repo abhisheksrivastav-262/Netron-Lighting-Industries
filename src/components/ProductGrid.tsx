@@ -33,8 +33,12 @@ export default function ProductGrid({
 
   return (
     <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-      {products.map((product) => (
-        <li key={product.slug}>
+      {products.map((product, index) => (
+        <li
+          key={product.slug}
+          className="anim-pop"
+          style={{ animationDelay: `${Math.min(index, 6) * 70}ms` }}
+        >
           <ProductCard product={product} />
         </li>
       ))}

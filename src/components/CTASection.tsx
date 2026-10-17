@@ -37,7 +37,7 @@ export default function CTASection({
                 }
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-electric px-7 py-3.5 text-sm font-semibold text-white transition hover:bg-ice hover:text-midnight sm:w-auto"
+                className="shine inline-flex w-full items-center justify-center gap-2 rounded-full bg-electric px-7 py-3.5 text-sm font-semibold text-white transition hover:bg-ice hover:text-midnight sm:w-auto"
               >
                 Enquire on WhatsApp
               </a>

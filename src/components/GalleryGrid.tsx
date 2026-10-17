@@ -57,24 +57,25 @@ export default function GalleryGrid({
             key={image.id}
             type="button"
             onClick={() => setActiveIndex(index)}
-            className="group mb-4 block w-full break-inside-avoid overflow-hidden rounded-2xl border border-midnight/10 bg-mist text-left shadow-sm transition hover:-translate-y-0.5 hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-electric"
+            className="anim-pop group mb-4 block w-full break-inside-avoid overflow-hidden rounded-2xl border border-midnight/10 bg-mist text-left shadow-sm transition hover:-translate-y-0.5 hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-electric"
+            style={{ animationDelay: `${Math.min(index, 8) * 45}ms` }}
             aria-label={`View larger: ${image.alt}`}
           >
             <span className="relative block">
               <img
                 src={image.src}
                 alt={image.alt}
-                className="h-auto w-full object-contain"
+                className="h-auto w-full object-contain transition duration-500 ease-out group-hover:scale-[1.04]"
                 loading="lazy"
                 decoding="async"
               />
               {showLabels && (
-                <span className="pointer-events-none absolute left-3 top-3 rounded-full bg-midnight/70 px-2.5 py-1 text-[0.7rem] font-medium text-white backdrop-blur-sm">
+                <span className="pointer-events-none absolute left-3 top-3 rounded-full bg-midnight/70 px-2.5 py-1 text-[0.7rem] font-medium text-white backdrop-blur-sm transition duration-300 group-hover:-translate-y-0.5">
                   {image.label}
                 </span>
               )}
-              <span className="pointer-events-none absolute inset-0 flex items-center justify-center bg-midnight/0 opacity-0 transition group-hover:bg-midnight/20 group-hover:opacity-100">
-                <span className="rounded-full bg-white/90 px-3 py-1.5 text-xs font-semibold text-midnight">
+              <span className="pointer-events-none absolute inset-0 flex items-center justify-center bg-midnight/0 opacity-0 transition duration-300 group-hover:bg-midnight/20 group-hover:opacity-100">
+                <span className="scale-95 rounded-full bg-white/90 px-3 py-1.5 text-xs font-semibold text-midnight transition duration-300 group-hover:scale-100">
                   View
                 </span>
               </span>
@@ -135,7 +136,7 @@ export default function GalleryGrid({
           )}
 
           <figure
-            className="flex max-h-full w-full max-w-5xl flex-col items-center"
+            className="anim-pop flex max-h-full w-full max-w-5xl flex-col items-center"
             onClick={(e) => e.stopPropagation()}
           >
             <img

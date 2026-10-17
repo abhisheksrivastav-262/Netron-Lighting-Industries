@@ -15,8 +15,24 @@ const NAV_LINKS = [
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [progress, setProgress] = useState(0);
   const panelId = useId();
   const toggleRef = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    const onScroll = () => {
+      const doc = document.documentElement;
+      const distance = doc.scrollHeight - window.innerHeight;
+      setProgress(distance > 0 ? Math.min(1, Math.max(0, window.scrollY / distance)) : 0);
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+    };
+  }, []);
 
   useEffect(() => {
     if (!open) return;
@@ -35,7 +51,7 @@ export default function Navbar() {
   }, [open]);
 
   const linkClass = ({ isActive }: { isActive: boolean }) =>
-    `relative text-sm font-medium transition-colors ${
+    `group relative text-sm font-medium transition-colors ${
       isActive
         ? "text-white"
         : "text-white/70 hover:text-white"
@@ -66,7 +82,7 @@ export default function Navbar() {
                       <span
                         className={`absolute -bottom-1.5 left-0 h-0.5 rounded-full bg-ice transition-all duration-300 ${
                           isActive ? "w-full" : "w-0"
-                        }`}
+                        } group-hover:w-full`}
                       />
                     </span>
                   )}
@@ -165,6 +181,20 @@ export default function Navbar() {
             </a>
           </li>
         </ul>
+      </div>
+
+      {/* Scroll progress indicator */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-x-0 bottom-0 h-0.5 bg-white/5"
+      >
+        <div
+          className="h-full rounded-full transition-[width] duration-150 ease-out"
+          style={{
+            width: `${progress * 100}%`,
+            backgroundImage: "linear-gradient(90deg, var(--color-electric), var(--color-ice))",
+          }}
+        />
       </div>
     </header>
   );

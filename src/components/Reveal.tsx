@@ -1,13 +1,22 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
 
+type Variant = "up" | "left" | "right" | "scale" | "blur";
+
 interface RevealProps {
   children: ReactNode;
   className?: string;
   delay?: number;
+  /** Entrance direction. "up" is the default and is used by all existing call sites. */
+  variant?: Variant;
 }
 
-/** Restrained scroll-entrance effect; disabled for reduced-motion users. */
-export default function Reveal({ children, className = "", delay = 0 }: RevealProps) {
+/** Scroll-entrance effect with several directions; disabled for reduced-motion users. */
+export default function Reveal({
+  children,
+  className = "",
+  delay = 0,
+  variant = "up",
+}: RevealProps) {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(
     () =>
@@ -39,7 +48,7 @@ export default function Reveal({ children, className = "", delay = 0 }: RevealPr
   return (
     <div
       ref={ref}
-      className={`reveal ${visible ? "is-visible" : ""} ${className}`}
+      className={`reveal reveal-${variant} ${visible ? "is-visible" : ""} ${className}`}
       style={delay ? { transitionDelay: `${delay}ms` } : undefined}
     >
       {children}

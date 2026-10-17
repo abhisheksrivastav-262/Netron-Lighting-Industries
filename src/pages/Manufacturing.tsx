@@ -109,7 +109,7 @@ export default function ManufacturingPage() {
             </ul>
           </Reveal>
 
-          <Reveal delay={100}>
+          <Reveal delay={100} variant="right">
             <figure className="overflow-hidden rounded-3xl border border-midnight/8 bg-white shadow-[var(--shadow-card)]">
               <Photo
                 src={ASSETS.ariaFan}

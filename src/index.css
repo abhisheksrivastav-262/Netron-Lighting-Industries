@@ -23,6 +23,9 @@
   html {
     scroll-behavior: smooth;
     -webkit-text-size-adjust: 100%;
+    /* Directional reveal animations translate sideways; clip that horizontal
+       overflow so they can never produce a sideways scrollbar. */
+    overflow-x: clip;
   }
 
   body {
@@ -84,6 +87,154 @@
   transform: none;
 }
 
+/* Reveal directions — add variety so sections do not all slide up the same way.
+   The horizontal distance is clamped so it can never exceed the page gutter
+   (smallest is 20px at 320px wide), which keeps content inside the viewport. */
+.reveal.reveal-left {
+  transform: translateX(calc(-1 * clamp(12px, 2.5vw, 40px)));
+}
+.reveal.reveal-right {
+  transform: translateX(clamp(12px, 2.5vw, 40px));
+}
+.reveal.reveal-scale {
+  transform: scale(0.94);
+}
+.reveal.reveal-blur {
+  transform: translateY(22px);
+  filter: blur(6px);
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal.reveal-left.is-visible,
+.reveal.reveal-right.is-visible,
+.reveal.reveal-scale.is-visible {
+  transform: none;
+}
+.reveal.reveal-blur.is-visible {
+  transform: none;
+  filter: none;
+}
+
+/* ---- Motion helpers ---- */
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+@keyframes glowPulse {
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: translateY(16px) scale(0.96);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(0) scale(1.015);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes gradShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.anim-float {
+  animation: float 7s ease-in-out infinite;
+}
+
+.anim-float-slow {
+  animation: float 10s ease-in-out infinite;
+}
+
+.anim-glow {
+  animation: glowPulse 6s ease-in-out infinite;
+}
+
+/* backwards (not both) so hover transforms still work once it finishes */
+.anim-pop {
+  animation: popIn 0.65s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+}
+
+/* Light sweep across a button on hover */
+.shine {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+.shine::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    transparent 32%,
+    rgba(255, 255, 255, 0.4) 50%,
+    transparent 68%
+  );
+  transform: translateX(-130%);
+  transition: transform 0.75s ease;
+  pointer-events: none;
+}
+.shine:hover::after,
+.shine:focus-visible::after {
+  transform: translateX(130%);
+}
+
+/* Moving headline gradient */
+.text-gradient-animated {
+  background-image: linear-gradient(
+    100deg,
+    #ffffff 0%,
+    #cfe6ff 26%,
+    #35d7ff 50%,
+    #cfe6ff 74%,
+    #ffffff 100%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradShift 9s ease-in-out infinite;
+}
+
+/* Card lift used by feature/info cards */
+.card-lift {
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.card-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 34px 64px -34px rgba(7, 20, 38, 0.5);
+}
+
 /* Subtle lighting accents */
 .light-grid {
   background-image: radial-gradient(
@@ -109,12 +260,22 @@
   *::before,
   *::after {
     animation-duration: 0.001ms !important;
+    animation-delay: 0s !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.001ms !important;
+    transition-delay: 0s !important;
     scroll-behavior: auto !important;
   }
-  .reveal {
+  .reveal,
+  .reveal.reveal-left,
+  .reveal.reveal-right,
+  .reveal.reveal-scale,
+  .reveal.reveal-blur {
     opacity: 1;
     transform: none;
+    filter: none;
+  }
+  .text-gradient-animated {
+    background-position: 0 50%;
   }
 }

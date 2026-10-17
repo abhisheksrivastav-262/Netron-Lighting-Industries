@@ -102,7 +102,7 @@ export default function WhyUsPage() {
           {REASONS.map((item, i) => (
             <li key={item.title}>
               <Reveal delay={i * 60}>
-                <div className="soft-card h-full p-6">
+                <div className="soft-card card-lift h-full p-6">
                   <span className="text-2xl" aria-hidden="true">
                     {item.icon}
                   </span>
@@ -153,7 +153,7 @@ export default function WhyUsPage() {
             </Link>
           </Reveal>
 
-          <Reveal delay={100}>
+          <Reveal delay={100} variant="right">
             <div className="grid grid-cols-2 gap-4">
               <Photo
                 src={ASSETS.zephyrFan}
@@ -210,7 +210,7 @@ export default function WhyUsPage() {
           {STEPS.map((item, i) => (
             <li key={item.step}>
               <Reveal delay={i * 80}>
-                <div className="soft-card h-full p-6">
+                <div className="soft-card card-lift h-full p-6">
                   <span className="text-2xl font-semibold text-electric">
                     {item.step}
                   </span>
