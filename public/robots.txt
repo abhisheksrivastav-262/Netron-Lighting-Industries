@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+# Sitemap location. Replace the placeholder host with the production domain
+# once it is confirmed for Netron Lighting Industries.
+# Sitemap: https://<production-domain>/sitemap.xml

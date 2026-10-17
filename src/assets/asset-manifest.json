@@ -1,0 +1,229 @@
+{
+  "company": "Netron Lighting Industries",
+  "business": "LED Bulb Manufacturing",
+  "namedBy": "On-device vision analysis on macOS (Vision framework): text recognition (OCR) + image classification + face detection, plus colour/shape statistics. Names below were read from the actual image content, not guessed.",
+  "generatedNote": "Source files in ~/Downloads/n were not modified. The client named WhatsApp Image 2026-10-17 at 06.19.19 (1).jpeg as logo.jpeg, so that file is used as the company logo; the remaining 18 files are photographs. Copies in public/images use safe filenames (photo-01…photo-19).",
+  "sourceDirectory": "/Users/abhisheksrivastav/Downloads/n",
+  "assets": [
+    {
+      "id": "bannerBlue",
+      "filename": "photo-01.jpeg",
+      "originalFilename": "WhatsApp Image 2026-10-17 at 06.19.12.jpeg",
+      "relativePath": "public/images/photo-01.jpeg",
+      "dimensions": "1244x560",
+      "name": "NETRON LIGHTING signboard",
+      "label": "Signboard",
+      "intendedUse": "Products page header / brand imagery",
+      "evidence": "OCR: \"NETRON LIGHTING\", \"Netrone Lighting\". Classification: sign 0.50, outdoor/sky 0.66 — brand board photographed outdoors."
+    },
+    {
+      "id": "interiorD",
+      "filename": "photo-02.jpeg",
+      "originalFilename": "WhatsApp Image 2026-10-17 at 06.19.14 (1).jpeg",
+      "relativePath": "public/images/photo-02.jpeg",
+      "dimensions": "1148x1280",
+      "name": "Amare 48\" induction ceiling fan",
+      "label": "Ceiling fan",
+      "intendedUse": "Gallery",
+      "evidence": "OCR: \"Amare 48\\\"\", \"Induction Fan\", \"100% copper\", \"Victura\", \"Airmotion\", \"Atlas\", \"White\", \"Sweep: 1200mm\" — ceiling-fan brochure/packaging."
+    },
+    {
+      "id": "wideBlue",
+      "filename": "photo-03.jpeg",
+      "originalFilename": "WhatsApp Image 2026-10-17 at 06.19.14.jpeg",
+      "relativePath": "public/images/photo-03.jpeg",
+      "dimensions": "866x506",
+      "name": "Er. Arun Vishwakarma — Founder & CMD",
+      "label": "Team",
+      "intendedUse": "About page — leadership",
+      "evidence": "Face detection: 1 face. OCR: \"Mr-Arun Vishwakarma\", \"Founder and CMD\", \"AGNI\". Classification: adult/people 0.87 — portrait of the founder."
+    },
+    {
+      "id": "productA",
+      "filename": "photo-04.jpeg",
+      "originalFilename": "WhatsApp Image 2026-10-17 at 06.19.15 (1).jpeg",
+      "relativePath": "public/images/photo-04.jpeg",
+      "dimensions": "1280x1280",
+      "name": "Aria induction ceiling fan",
+      "label": "Ceiling fan",
+      "intendedUse": "Product card / gallery",
+      "evidence": "OCR: \"Aria induction\" — Aria induction ceiling fan."
+    },
+    {
+      "id": "productB",
+      "filename": "photo-05.jpeg",
+      "originalFilename": "WhatsApp Image 2026-10-17 at 06.19.15 (2).jpeg",
+      "relativePath": "public/images/photo-05.jpeg",
+      "dimensions": "1280x1280",
+      "name": "Etoile ceiling fan",
+      "label": "Ceiling fan",
+      "intendedUse": "Product card / gallery",
+      "evidence": "OCR: \"Etoile\" — Etoile ceiling fan."
+    },
+    {
+      "id": "scene2",
+      "filename": "photo-06.jpeg",
+      "originalFilename": "WhatsApp Image 2026-10-17 at 06.19.15.jpeg",
+      "relativePath": "public/images/photo-06.jpeg",
+      "dimensions": "1200x1600",
+      "name": "Zephyr 48\" ceiling fan (brown)",
+      "label": "Ceiling fan",
+      "intendedUse": "Gallery",
+      "evidence": "OCR: \"Zephyr 48\\\"\", \"Induction Fan\", \"100%copper\", \"Victura\", \"Airmotion\", \"Brown\", \"Sweep: 1200mm\" — Zephyr fan packaging/poster."
+    },
+    {
+      "id": "textureA",
+      "filename": "photo-07.jpeg",
+      "originalFilename": "WhatsApp Image 2026-10-17 at 06.19.16 (1).jpeg",
+      "relativePath": "public/images/photo-07.jpeg",
+      "dimensions": "1200x1600",
+      "name": "LED bulb",
+      "label": "LED bulb",
+      "intendedUse": "Gallery",
+      "evidence": "Classification: light_bulb 0.09, lamp 0.03 — LED bulb product photograph."
+    },
+    {
+      "id": "darkPortrait",
+      "filename": "photo-08.jpeg",
+      "originalFilename": "WhatsApp Image 2026-10-17 at 06.19.16.jpeg",
+      "relativePath": "public/images/photo-08.jpeg",
+      "dimensions": "1200x1600",
+      "name": "LED bulb (lit)",
+      "label": "LED bulb",
+      "intendedUse": "Gallery",
+      "evidence": "Classification: light_bulb 0.13, light 0.13, spotlight/flame — bulb glowing on a dark background."
+    },
+    {
+      "id": "sceneWarm",
+      "filename": "photo-09.jpeg",
+      "originalFilename": "WhatsApp Image 2026-10-17 at 06.19.17 (1).jpeg",
+      "relativePath": "public/images/photo-09.jpeg",
+      "dimensions": "1204x1600",
+      "name": "SUZEX ceiling fan",
+      "label": "Ceiling fan",
+      "intendedUse": "Product card / gallery",
+      "evidence": "Classification: electric_fan 0.83, appliance 0.83. OCR: \"SUZEX\" — ceiling fan."
+    },
+    {
+      "id": "scenePortrait",
+      "filename": "photo-10.jpeg",
+      "originalFilename": "WhatsApp Image 2026-10-17 at 06.19.17.jpeg",
+      "relativePath": "public/images/photo-10.jpeg",
+      "dimensions": "1204x1600",
+      "name": "SUZEX ceiling fan (display)",
+      "label": "Ceiling fan",
+      "intendedUse": "Product card / gallery",
+      "evidence": "Classification: electric_fan 0.87, interior_shop 0.40. OCR: \"SUZEX\" — fan on display."
+    },
+    {
+      "id": "interiorB",
+      "filename": "photo-11.jpeg",
+      "originalFilename": "WhatsApp Image 2026-10-17 at 06.19.18 (1).jpeg",
+      "relativePath": "public/images/photo-11.jpeg",
+      "dimensions": "1600x1204",
+      "name": "Product photograph",
+      "label": "Product",
+      "intendedUse": "Gallery",
+      "evidence": "UNCONFIRMED — no text detected; dark frame (50%) with a grey/teal centred subject. Classification is weak (tool/toilet_seat). Please confirm what this shows."
+    },
+    {
+      "id": "interiorC",
+      "filename": "photo-12.jpeg",
+      "originalFilename": "WhatsApp Image 2026-10-17 at 06.19.18 (2).jpeg",
+      "relativePath": "public/images/photo-12.jpeg",
+      "dimensions": "1280x963",
+      "name": "Product photograph",
+      "label": "Product",
+      "intendedUse": "Gallery",
+      "evidence": "UNCONFIRMED — no text detected; dark frame with a grey/white centred subject (classification: plate/pan). Please confirm what this shows."
+    },
+    {
+      "id": "interiorA",
+      "filename": "photo-13.jpeg",
+      "originalFilename": "WhatsApp Image 2026-10-17 at 06.19.18.jpeg",
+      "relativePath": "public/images/photo-13.jpeg",
+      "dimensions": "1600x1204",
+      "name": "Product photograph",
+      "label": "Product",
+      "intendedUse": "About / gallery",
+      "evidence": "UNCONFIRMED — no text detected; bright centred subject on a dark surround (classification: cord/machine). Please confirm what this shows."
+    },
+    {
+      "id": "textureB",
+      "filename": "photo-15.jpeg",
+      "originalFilename": "WhatsApp Image 2026-10-17 at 06.19.19 (2).jpeg",
+      "relativePath": "public/images/photo-15.jpeg",
+      "dimensions": "718x1014",
+      "name": "Company photograph",
+      "label": "Photograph",
+      "intendedUse": "Gallery",
+      "evidence": "UNCONFIRMED — no text detected; flat uniform grey surface (79% grey), very low detail. Please confirm what this shows."
+    },
+    {
+      "id": "productDark",
+      "filename": "photo-16.jpeg",
+      "originalFilename": "WhatsApp Image 2026-10-17 at 06.19.19.jpeg",
+      "relativePath": "public/images/photo-16.jpeg",
+      "dimensions": "1512x1512",
+      "name": "7W LED downlight",
+      "label": "LED downlight",
+      "intendedUse": "Home hero visual / product card",
+      "evidence": "OCR: \"7W DOWNLIGHT\", \"Year Gurrantey\" (1-year guarantee) — LED downlight on a dark background."
+    },
+    {
+      "id": "photo17",
+      "filename": "photo-17.jpeg",
+      "originalFilename": "WhatsApp Image 2026-10-17 at 06.19.20 (1).jpeg",
+      "relativePath": "public/images/photo-17.jpeg",
+      "dimensions": "1038x1009",
+      "name": "Product photograph",
+      "label": "Product",
+      "intendedUse": "Gallery",
+      "evidence": "UNCONFIRMED — no text detected; white background (48%) with a dark centred subject and blue accents. Please confirm what this shows."
+    },
+    {
+      "id": "packaging",
+      "filename": "photo-18.jpeg",
+      "originalFilename": "WhatsApp Image 2026-10-17 at 06.19.20.jpeg",
+      "relativePath": "public/images/photo-18.jpeg",
+      "dimensions": "1280x596",
+      "name": "NETRONE LIGHTING & SOLAR INDUSTRIES signboard",
+      "label": "Signboard",
+      "intendedUse": "Products page header / gallery",
+      "evidence": "OCR: \"NETRONE LIGHTING & SOLAR INDUSTRIES\", \"Er. Arun Vishwakarma\", \"Mob: 9621346653, 8009394243\" — branded board with contact details."
+    },
+    {
+      "id": "outdoor",
+      "filename": "photo-19.jpeg",
+      "originalFilename": "WhatsApp Image 2026-10-17 at 06.19.21.jpeg",
+      "relativePath": "public/images/photo-19.jpeg",
+      "dimensions": "719x419",
+      "name": "Chandrayaan Series LED bulb packaging (20W–50W)",
+      "label": "Packaging",
+      "intendedUse": "Gallery",
+      "evidence": "OCR: \"CHANDRAYAAN SERIES\", \"20W\", \"30W\", \"40W\", \"50W\", \"55%\" — LED bulb packaging box."
+    },
+    {
+      "id": "companyLogo",
+      "filename": "logo.jpeg",
+      "originalFilename": "WhatsApp Image 2026-10-17 at 06.19.19 (1).jpeg (renamed to logo.jpeg by the client)",
+      "relativePath": "public/images/logo.jpeg",
+      "dimensions": "720x1280",
+      "name": "Company logo",
+      "label": "Logo",
+      "intendedUse": "Navbar and footer, presented as a circle",
+      "evidence": "Classification: screenshot/document 0.84. OCR: \"Profile photo\", \"Netrone Lighting\" — a screenshot of the company's WhatsApp profile; a centre square is cropped and circular-masked for round presentations."
+    },
+    {
+      "id": "logoSquare",
+      "filename": "logo-512.png",
+      "originalFilename": "logo.jpeg (derived)",
+      "relativePath": "public/images/logo-512.png",
+      "dimensions": "512x512",
+      "name": "Company logo (circular)",
+      "label": "Logo",
+      "intendedUse": "Circular logo for round UI presentations and touch icons",
+      "evidence": "Centre square (720x720) cropped from logo.jpeg, scaled with LANCZOS to 512, circular alpha mask applied — transparent corners, original file untouched."
+    }
+  ]
+}

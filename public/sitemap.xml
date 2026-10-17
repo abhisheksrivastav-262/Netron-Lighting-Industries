@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Sitemap for Netron Lighting Industries.
+  A production domain has not been confirmed for this project, so entries use
+  root-relative paths. Replace each <loc> value with the full production URL
+  (for example https://example-domain.com/products) once the domain is known.
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
+  <url><loc>/about</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>/products</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>/products/netron-led-bulb</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>/products/netron-led-bulb-lit</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>/products/netron-7w-led-downlight</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>/products/aria-induction-ceiling-fan</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>/products/etoile-ceiling-fan</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>/products/zephyr-48-ceiling-fan</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>/products/amare-48-ceiling-fan</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>/products/suzex-ceiling-fan</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>/products/chandrayaan-series-led-bulb-packaging</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>/products/solar-panel</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>/manufacturing</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>/why-us</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>/gallery</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>/contact</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>/privacy-policy</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+</urlset>
