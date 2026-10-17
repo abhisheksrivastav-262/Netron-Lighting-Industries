@@ -1,43 +1,57 @@
 const BASE = "/images/";
 
 /**
- * Central registry of the real Netron Lighting Industries photographs.
- *
- * Keys are named after what each photograph actually shows. The names were
- * verified by on-device vision analysis (text recognition + image
- * classification + face detection) — see src/assets/asset-manifest.json for the
- * evidence behind each one. The copies in public/images use safe, URL-friendly
- * names (photo-01 … photo-19); the original company filenames are preserved in
- * the manifest and were never modified.
+ * Central registry of Netron Lighting Industries official product & company graphics.
+ * All 20 supplied images from public/images are mapped here with clean URLs.
+ * Backward-compatible keys are preserved so all site pages render without broken images.
  */
 export const ASSETS = {
   logo: `${BASE}logo.png`,
   logoSquare: `${BASE}logo-512.png`,
+  logoShare: `${BASE}logo-share.png`,
+  logoOriginal: `${BASE}logo.jpeg`,
 
-  // Products
-  ledBulb9w: `${BASE}photo-20.jpeg`,
-  ledBulb: `${BASE}photo-07.jpeg`,
-  ledBulbLit: `${BASE}photo-08.jpeg`,
-  downlight7w: `${BASE}photo-16.jpeg`,
-  chandrayaanPackaging: `${BASE}photo-19.jpeg`,
-  ariaFan: `${BASE}photo-04.jpeg`,
-  etoileFan: `${BASE}photo-05.jpeg`,
-  zephyrFan: `${BASE}photo-06.jpeg`,
-  amareFan: `${BASE}photo-02.jpeg`,
-  suzexFan: `${BASE}photo-09.jpeg`,
-  suzexFanDisplay: `${BASE}photo-10.jpeg`,
-  solarPanel: `${BASE}photo-17.jpeg`,
+  // 20 New Official Product & Marketing Assets (clean hardlinked paths)
+  productsBanner: `${BASE}netron-led-products.png`,
+  industrialRange: `${BASE}industrial-outdoor-lights.png`,
+  streetLight120w: `${BASE}led-street-light-120w.png`,
+  multiColorSpotDownlight: `${BASE}multicolor-downlight-spotlight.png`,
+  spotLight1y: `${BASE}led-spot-light-1y.png`,
+  panelLightSlim: `${BASE}led-panel-light-slim.png`,
+  ceilingFanHighAir: `${BASE}ceiling-fan-high-air.png`,
+  ceilingFanMotor: `${BASE}ceiling-fan-motor.png`,
+  ceilingFanPowerfulAir: `${BASE}ceiling-fan-powerful-airflow.png`,
+  downlightPremium: `${BASE}premium-led-downlight.png`,
+  downlight7w: `${BASE}7w-led-downlight.png`,
+  downlight9wColor: `${BASE}9w-multicolor-downlight.png`,
+  ledBulbSeries: `${BASE}led-bulb-series-20-50w.png`,
+  fanFreedom24in: `${BASE}freedom-24in-ceiling-fan.png`,
+  fanVedsunRunner24in: `${BASE}vedsun-runner-24in-fan.png`,
+  fanSummerBeat48in: `${BASE}summer-beat-48in-fan.png`,
+  cobDownlightAluminum: `${BASE}cob-led-downlight-aluminum.png`,
+  slimPanelDownlight: `${BASE}slim-panel-led-downlight.png`,
+  foldableLedBulb4Blade: `${BASE}4-blade-foldable-led-bulb.png`,
+  chandrayaan50wBulb: `${BASE}chandrayaan-50w-led-bulb.png`,
 
-  // Brand & team
-  brandBoard: `${BASE}photo-01.jpeg`,
-  signboard: `${BASE}photo-18.jpeg`,
-  founder: `${BASE}photo-03.jpeg`,
-
-  // Additional photographs
-  ceilingFanA: `${BASE}photo-11.jpeg`,
-  ceilingFanB: `${BASE}photo-12.jpeg`,
-  ceilingFanC: `${BASE}photo-13.jpeg`,
-  ceilingFanD: `${BASE}photo-15.jpeg`,
+  // Backwards-compatible aliases for existing page references
+  brandBoard: `${BASE}netron-led-products.png`,
+  signboard: `${BASE}netron-led-products.png`,
+  founder: `${BASE}logo-512.png`,
+  ledBulb9w: `${BASE}chandrayaan-50w-led-bulb.png`,
+  ledBulb: `${BASE}4-blade-foldable-led-bulb.png`,
+  ledBulbLit: `${BASE}chandrayaan-50w-led-bulb.png`,
+  chandrayaanPackaging: `${BASE}led-bulb-series-20-50w.png`,
+  ariaFan: `${BASE}freedom-24in-ceiling-fan.png`,
+  etoileFan: `${BASE}vedsun-runner-24in-fan.png`,
+  zephyrFan: `${BASE}summer-beat-48in-fan.png`,
+  amareFan: `${BASE}ceiling-fan-high-air.png`,
+  suzexFan: `${BASE}ceiling-fan-powerful-airflow.png`,
+  suzexFanDisplay: `${BASE}ceiling-fan-powerful-airflow.png`,
+  solarPanel: `${BASE}industrial-outdoor-lights.png`,
+  ceilingFanA: `${BASE}ceiling-fan-high-air.png`,
+  ceilingFanB: `${BASE}freedom-24in-ceiling-fan.png`,
+  ceilingFanC: `${BASE}vedsun-runner-24in-fan.png`,
+  ceilingFanD: `${BASE}summer-beat-48in-fan.png`,
 } as const;
 
 export type AssetKey = keyof typeof ASSETS;

@@ -36,6 +36,12 @@ export default function Footer() {
               {COMPANY.phoneDisplay}
             </a>
             <a
+              href={COMPANY.emailMailto}
+              className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-medium text-white transition hover:bg-white/15"
+            >
+              {COMPANY.email}
+            </a>
+            <a
               href={whatsappUrl()}
               target="_blank"
               rel="noopener noreferrer"
@@ -80,6 +86,14 @@ export default function Footer() {
                 className="transition hover:text-white"
               >
                 {COMPANY.phoneDisplay}
+              </a>
+            </p>
+            <p>
+              <a
+                href={COMPANY.emailMailto}
+                className="transition hover:text-white"
+              >
+                {COMPANY.email}
               </a>
             </p>
           </address>

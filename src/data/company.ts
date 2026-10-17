@@ -3,6 +3,8 @@ export const COMPANY = {
   business: "LED Bulb Manufacturing",
   phoneDisplay: "+91 9621346653",
   phoneDial: "tel:+919621346653",
+  email: "netron.power@gmail.com",
+  emailMailto: "mailto:netron.power@gmail.com",
   whatsappBase: "https://wa.me/919621346653",
   address: {
     street: "Patel Chauraha, Meja Road",

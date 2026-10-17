@@ -113,6 +113,7 @@ export default function AboutPage() {
                 value: `${COMPANY.address.street}, ${COMPANY.address.city}`,
               },
               { label: "Phone", value: COMPANY.phoneDisplay },
+              { label: "Email", value: COMPANY.email },
             ].map((item, i) => (
               <Reveal key={item.label} delay={i * 70}>
                 <div className="soft-card h-full p-6">

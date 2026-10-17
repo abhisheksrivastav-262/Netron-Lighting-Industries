@@ -1,6 +1,6 @@
 import { chromium } from "playwright";
 const BASE = "http://localhost:4173";
-const ROUTES = ["/", "/about", "/products", "/products/netron-led-bulb", "/manufacturing", "/why-us", "/gallery", "/contact"];
+const ROUTES = ["/", "/about", "/products", "/products/netron-7w-led-downlight", "/manufacturing", "/why-us", "/gallery", "/contact"];
 const browser = await chromium.launch();
 const ctx = await browser.newContext({ viewport: { width: 1440, height: 900 } });
 const page = await ctx.newPage();

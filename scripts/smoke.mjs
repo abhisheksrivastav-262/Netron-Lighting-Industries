@@ -5,7 +5,7 @@ const ROUTES = [
   "/",
   "/about",
   "/products",
-  "/products/netron-led-bulb",
+  "/products/netron-7w-led-downlight",
   "/products/nonexistent-slug",
   "/manufacturing",
   "/why-us",
@@ -112,16 +112,17 @@ for (const [label, path] of [
 // product card + detail links
 await page.goto(BASE + "/products", { waitUntil: "networkidle" });
 await page.locator('a:has-text("View details")').first().click();
-await page.waitForURL(/\/products\/[a-z-]+$/);
+await page.waitForURL(/\/products\/[a-z0-9-]+$/);
 await page.waitForSelector('h2:has-text("Related products")');
 check(
-  /\/products\/[a-z-]+$/.test(new URL(page.url()).pathname),
+  /\/products\/[a-z0-9-]+$/.test(new URL(page.url()).pathname),
   `product card navigates to detail (${new URL(page.url()).pathname})`,
 );
 
 // product detail: product-specific whatsapp link + related products
 const detailWa = await page
-  .locator('a:has-text("Enquire on WhatsApp")')
+  .locator('main a[href*="wa.me"]')
+  .filter({ hasText: /Enquir/i })
   .first()
   .getAttribute("href");
 check(
@@ -133,13 +134,13 @@ check(related === 1, "related products section present");
 
 // product search + filter
 await page.goto(BASE + "/products", { waitUntil: "networkidle" });
-await page.fill("#product-search", "packaging");
+await page.fill("#product-search", "Chandrayaan");
 await page.waitForTimeout(200);
-const packagingCard = await page.locator('article:has-text("Chandrayaan Series LED Bulb Packaging")').count();
+const chandrayaanCard = await page.locator('article:has-text("Chandrayaan")').count();
 const cardsAfterSearch = await page.locator("article").count();
 check(
-  packagingCard === 1 && cardsAfterSearch >= 1,
-  `search "packaging" shows the packaging product (${cardsAfterSearch} card(s), packaging present: ${packagingCard === 1})`,
+  chandrayaanCard >= 1 && cardsAfterSearch >= 1,
+  `search "Chandrayaan" shows matching product (${cardsAfterSearch} card(s), Chandrayaan present: ${chandrayaanCard >= 1})`,
 );
 await page.fill("#product-search", "zzzznomatch");
 await page.waitForTimeout(200);
@@ -155,7 +156,7 @@ check(bulbCards === 3, `category filter "LED Bulbs" shows 3 products (got ${bulb
 const galleryTile = 'button[aria-label^="View larger:"]';
 await page.goto(BASE + "/gallery", { waitUntil: "networkidle" });
 const galleryTiles = await page.locator(galleryTile).count();
-check(galleryTiles === 19, `gallery page shows all 19 photographs (got ${galleryTiles})`);
+check(galleryTiles === 20, `gallery page shows all 20 photographs (got ${galleryTiles})`);
 await page.locator(galleryTile).first().click();
 await page.waitForSelector('[role="dialog"]');
 check((await page.locator('[role="dialog"]').count()) === 1, "clicking a gallery tile opens the lightbox");
@@ -170,7 +171,7 @@ check((await page.locator('[role="dialog"]').count()) === 0, "Escape closes the 
 
 await page.goto(BASE + "/", { waitUntil: "networkidle" });
 const homeTiles = await page.locator(galleryTile).count();
-check(homeTiles === 19, `home page gallery shows all 19 photographs (got ${homeTiles})`);
+check(homeTiles === 20, `home page gallery shows all 20 photographs (got ${homeTiles})`);
 
 // contact form validation
 await page.goto(BASE + "/contact", { waitUntil: "networkidle" });

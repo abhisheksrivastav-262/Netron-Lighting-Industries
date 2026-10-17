@@ -56,6 +56,17 @@ export default function ContactPage() {
                     </dd>
                   </div>
                   <div>
+                    <dt className="font-medium text-muted">Email</dt>
+                    <dd className="mt-0.5">
+                      <a
+                        href={COMPANY.emailMailto}
+                        className="text-base font-semibold text-electric transition hover:text-midnight break-all"
+                      >
+                        {COMPANY.email}
+                      </a>
+                    </dd>
+                  </div>
+                  <div>
                     <dt className="font-medium text-muted">Address</dt>
                     <dd className="mt-0.5 text-base leading-relaxed text-midnight">
                       {COMPANY.address.street}

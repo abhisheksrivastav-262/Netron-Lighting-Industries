@@ -104,14 +104,21 @@ export default function PrivacyPolicyPage() {
             <h2 className="text-xl font-semibold text-midnight">Contact us</h2>
             <p className="mt-3">
               For any question about this policy or your information, contact{" "}
-              {COMPANY.name} at{" "}
+              {COMPANY.name} by phone at{" "}
               <a
                 href={COMPANY.phoneDial}
                 className="font-semibold text-electric hover:text-midnight"
               >
                 {COMPANY.phoneDisplay}
-              </a>{" "}
-              or visit us at {COMPANY.addressLine}.
+              </a>
+              , by email at{" "}
+              <a
+                href={COMPANY.emailMailto}
+                className="font-semibold text-electric hover:text-midnight"
+              >
+                {COMPANY.email}
+              </a>
+              , or visit us at {COMPANY.addressLine}.
             </p>
           </div>
 

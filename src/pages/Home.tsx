@@ -36,7 +36,7 @@ const STRENGTHS = [
 ];
 
 export default function HomePage() {
-  const featured = PRODUCTS.slice(0, 3);
+  const featured = PRODUCTS.slice(0, 6);
 
   return (
     <>
@@ -49,6 +49,7 @@ export default function HomePage() {
           "@type": "Organization",
           name: COMPANY.name,
           telephone: COMPANY.phoneDisplay,
+          email: COMPANY.email,
           address: {
             "@type": "PostalAddress",
             streetAddress: COMPANY.address.street,
