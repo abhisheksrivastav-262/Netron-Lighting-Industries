@@ -2,8 +2,8 @@
   "company": "Netron Lighting Industries",
   "business": "LED Bulb Manufacturing",
   "verifiedSource": "public/images/",
-  "totalAssets": 20,
-  "description": "Complete registry of 20 official product posters and marketing graphics for Netron Lighting Industries. All images are rendered uncropped with object-contain and have direct WhatsApp enquiry links.",
+  "totalAssets": 21,
+  "description": "Complete registry of 21 official product posters and marketing graphics for Netron Lighting Industries. All images are rendered uncropped with object-contain and have direct WhatsApp enquiry links.",
   "assets": [
     {
       "id": "asset-01",
@@ -204,6 +204,16 @@
       "name": "Chandrayaan Series 50W High Power LED Bulb (85% Energy Saving)",
       "label": "LED Bulb",
       "evidence": "OCR: '50W LED BULB', 'CHANDRAYAAN SERIES', 'Upto 85% Energy Saving', 'High Brightness, Long Life'"
+    },
+    {
+      "id": "asset-21",
+      "filename": "n.png",
+      "originalFilename": "n.png",
+      "relativePath": "public/images/n.png",
+      "dimensions": "1254x1254",
+      "name": "Netron 9W Downlight (1 Year Guarantee)",
+      "label": "Downlight",
+      "evidence": "OCR: 'Netron LIGHTING INDUSTRIES', '9W DOWNLIGHT', 'Year Gurrantey', 'Netron Lighting 9W'"
     }
   ]
 }

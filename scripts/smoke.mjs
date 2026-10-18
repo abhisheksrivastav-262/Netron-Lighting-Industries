@@ -156,7 +156,7 @@ check(bulbCards === 3, `category filter "LED Bulbs" shows 3 products (got ${bulb
 const galleryTile = 'button[aria-label^="View larger:"]';
 await page.goto(BASE + "/gallery", { waitUntil: "networkidle" });
 const galleryTiles = await page.locator(galleryTile).count();
-check(galleryTiles === 20, `gallery page shows all 20 photographs (got ${galleryTiles})`);
+check(galleryTiles === 21, `gallery page shows all 21 photographs (got ${galleryTiles})`);
 await page.locator(galleryTile).first().click();
 await page.waitForSelector('[role="dialog"]');
 check((await page.locator('[role="dialog"]').count()) === 1, "clicking a gallery tile opens the lightbox");
@@ -171,7 +171,7 @@ check((await page.locator('[role="dialog"]').count()) === 0, "Escape closes the 
 
 await page.goto(BASE + "/", { waitUntil: "networkidle" });
 const homeTiles = await page.locator(galleryTile).count();
-check(homeTiles === 20, `home page gallery shows all 20 photographs (got ${homeTiles})`);
+check(homeTiles === 21, `home page gallery shows all 21 photographs (got ${homeTiles})`);
 
 // contact form validation
 await page.goto(BASE + "/contact", { waitUntil: "networkidle" });

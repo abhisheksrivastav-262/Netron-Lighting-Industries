@@ -45,6 +45,24 @@ export const PRODUCTS: Product[] = [
     ],
   },
   {
+    slug: "netron-9w-downlight",
+    name: "Netron 9W Downlight (1 Year Guarantee)",
+    category: "LED Downlights",
+    tagline: "9W Downlight • 1 Year Guarantee • High Brightness",
+    description:
+      "Official 9W Downlight by Netron Lighting Industries backed with 1-Year Guarantee ('Year Gurrantey'). Designed for clear, uniform illumination, energy savings, and durable long-lasting performance.",
+    image: ASSETS.downlight9wPack,
+    imageAlt: "Netron Lighting Industries 9W Downlight with 1 Year Guarantee",
+    specs: [
+      { label: "Product type", value: "9W LED Downlight" },
+      { label: "Brand", value: "Netron Lighting Industries" },
+      { label: "Wattage", value: "9W" },
+      { label: "Guarantee", value: "1 Year Guarantee" },
+      { label: "Packaging", value: "Netron Lighting 9W Official Box Pack" },
+      { label: "Application", value: "Residential, Commercial & Display Lighting" },
+    ],
+  },
+  {
     slug: "netron-chandrayaan-50w-led-bulb",
     name: "Chandrayaan Series 50W LED Bulb",
     category: "LED Bulbs",

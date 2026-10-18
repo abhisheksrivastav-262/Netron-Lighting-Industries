@@ -12,7 +12,7 @@ export interface GalleryImage {
 }
 
 /**
- * All 20 official Netron Lighting Industries photographs and posters.
+ * All 21 official Netron Lighting Industries photographs and posters.
  * Every image is shown uncropped with natural dimensions.
  */
 export const GALLERY: GalleryImage[] = [
@@ -25,6 +25,13 @@ export const GALLERY: GalleryImage[] = [
   },
   {
     id: "img-02",
+    src: ASSETS.downlight9wPack,
+    label: "Downlight",
+    name: "Netron 9W Downlight (1 Year Guarantee)",
+    alt: "Netron Lighting Industries 9W Downlight with 1 Year Guarantee packaging",
+  },
+  {
+    id: "img-03",
     src: ASSETS.industrialRange,
     label: "Outdoor",
     name: "Industrial & Outdoor Lights (Street, Junction, Flood, Panel)",
@@ -150,7 +157,7 @@ export const GALLERY: GalleryImage[] = [
     alt: "Netron 4-Blade Foldable LED Bulb showing folded and expanded dimensions",
   },
   {
-    id: "img-20",
+    id: "img-21",
     src: ASSETS.chandrayaan50wBulb,
     label: "LED Bulb",
     name: "Chandrayaan Series 50W High Power LED Bulb",

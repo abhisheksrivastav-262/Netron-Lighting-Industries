@@ -24,6 +24,7 @@ export const ASSETS = {
   downlightPremium: `${BASE}premium-led-downlight.png`,
   downlight7w: `${BASE}7w-led-downlight.png`,
   downlight9wColor: `${BASE}9w-multicolor-downlight.png`,
+  downlight9wPack: `${BASE}n.png`,
   ledBulbSeries: `${BASE}led-bulb-series-20-50w.png`,
   fanFreedom24in: `${BASE}freedom-24in-ceiling-fan.png`,
   fanVedsunRunner24in: `${BASE}vedsun-runner-24in-fan.png`,
